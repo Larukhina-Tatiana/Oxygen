@@ -1,0 +1,63 @@
+.slick-dots {
+  position: absolute;
+  bottom: rem(5);
+  left: 0;
+  right: 0;
+  display: flex;
+
+
+  button {
+    margin: 0 rem(6);
+    padding: 0;
+    font-size: 0;
+    background-color: rgba($color: #242121, $alpha: .4);
+    width: rem(6);
+    height: rem(6);
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.slick-active {
+  button {
+    width: rem(10);
+    height: rem(10);
+    background-color: var(--black);
+  }
+}
+
+
+.slick-arrow {
+  position: absolute;
+  top: 30%;
+  transform: translateX(-30%);
+  z-index: 5;
+  fill: var(--gray);
+  @include transition ($transition-property: fill);
+
+  @media (any-hover: hover) {
+    &:hover {
+      fill: var(--accent);
+    }
+  }
+
+
+
+  @media screen and (width < 768.98px) {
+    top: 50%;
+    transform: translateX(-50%);
+
+    &__svg {
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+}
+
+.slick-prev {
+  left: rem(16);
+}
+
+.slick-next {
+  right: rem(0);
+}

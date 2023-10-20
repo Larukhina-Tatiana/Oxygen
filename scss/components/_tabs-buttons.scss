@@ -1,0 +1,43 @@
+.tabs-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include adaptivevalue(gap, 45, 15, 1200, 320, 1);
+
+  &__btn {
+    padding-top: rem(7);
+    padding-bottom: rem(7);
+    color: var(--gray);
+    text-align: right;
+    @extend %OpenSans-600;
+    font-size: rem(12);
+    line-height: 2;
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+    @include transition ($transition-property: color);
+    
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+.mixitup-control-active {
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: rem(2);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      background-color: var(--accent);
+    }
+
+}

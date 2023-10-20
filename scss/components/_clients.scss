@@ -1,0 +1,59 @@
+.clients-list {
+  @include adaptivevalue(padding-top, 60, 20, 1200, 320, 1);
+  @include adaptivevalue(padding-bottom, 60, 20, 1200, 320, 1);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: rem(30);
+
+  &__item {
+    flex-basis: rem(150);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: rem(92);
+
+    border: 1px solid var(--accent1);
+    border-radius: 4px;
+    @include transition($transition-property: (border,
+        fill,
+      ));
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: var(--accent);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid var(--accent);
+  }
+
+  &__icon {
+    fill: var(--accent1);
+    @include transition($transition-property: (border,
+        fill,
+      ));
+  }
+
+
+  @media screen and (max-width: 1084px) {
+
+    &__item {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.vision {
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: rem(705);
+  }
+
+  &__content {
+    @include adaptivevalue(padding-top, 100, 50, 1200, 320, 1);
+    @include adaptivevalue(padding-right, 135, 20, 1200, 320, 1);
+    @include adaptivevalue(padding-left, 130, 20, 1200, 320, 1);
+    @include adaptivevalue(padding-bottom, 180, 55, 1200, 320, 1);
+    background-color: var(--background);
+    max-width: rem(720);
+  }
+
+  &__title {
+    @include adaptivevalue(margin-bottom, 67, 30, 1200, 320, 1);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptivevalue(margin-bottom, 25, 10, 1200, 320, 1);
+    }
+  }
+
+  @media screen and (width < 1024.98px) {
+    &__img {
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (width < 768.98px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.pricing {
+  @include adaptivevalue(padding-top, 144, 30, 1200, 320, 1);
+  @include adaptivevalue(padding-bottom, 162, 50, 1200, 320, 1);
+  background-color: var(--background);
+  color: var(--black);
+
+  &__title {
+    @include adaptivevalue(margin-bottom, 110, 50, 1200, 320, 1);
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(30);
+    text-align: center;
+
+
+    &-item {
+      max-width: 32%;
+      width: 100%;
+      background-color: var(--white);
+      @include adaptivevalue(padding-top, 24, 14, 1200, 320, 1);
+      @include adaptivevalue(padding-bottom, 54, 24, 1200, 320, 1);
+      @include adaptivevalue(padding-left, 25, 15, 1200, 320, 1);
+      @include adaptivevalue(padding-right, 25, 15, 1200, 320, 1);
+    }
+
+
+    &-title {
+      @extend %OpenSans-700;
+      font-size: rem(16);
+      text-align: left;
+    }
+
+    &-rate {
+      @extend %OpenSans-300;
+      @include adaptivevalue(margin-bottom, 50, 25, 1200, 320, 1);
+
+      &-num {
+        display: inline-block;
+        font-size: rem(80);
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '$';
+          font-size: rem(40);
+          top: rem(20);
+          left: rem(-25);
+        }
+      }
+
+      &-mo {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  &__card-options {
+    @include adaptivevalue(margin-bottom, 70, 30, 1200, 320, 1);
+
+    &-item {
+      @extend %OpenSans-300;
+      font-size: rem(16);
+
+      &:not(:last-child) {
+        @include adaptivevalue(margin-bottom, 30, 10, 1200, 320, 1);
+      }
+    }
+  }
+
+  &__btn {
+    @extend %Montserrat-700;
+    font-size: rem(14);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  @media screen and (width < 620.98px) {
+
+    &__card {
+      flex-direction: column;
+
+      &-item {
+        max-width: 70%;
+        width: 100%;
+      }
+    }
+  }
+}

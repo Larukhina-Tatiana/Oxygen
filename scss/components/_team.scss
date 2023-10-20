@@ -1,0 +1,39 @@
+.team {
+  @include adaptivevalue(padding-top, 120, 30, 1200, 320, 1);
+  @include adaptivevalue(padding-bottom, 164, 50, 1200, 320, 1);
+
+  &__title {
+    @include adaptivevalue(margin-bottom, 102, 15, 1200, 320, 1);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+    text-align: center;
+  }
+
+  &__item {
+    flex-basis: 32%;
+  }
+
+  &__name {
+    margin-top: rem(35);
+    margin-bottom: rem(12);
+  }
+
+  &__professional {
+    color: var(--silver);
+    @extend %OpenSans-300;
+    font-size: rem(12);
+  }
+
+  @media screen and (width < 580.98px ) {
+    &__list {
+    flex-direction: column;
+    }
+
+  }
+}
+

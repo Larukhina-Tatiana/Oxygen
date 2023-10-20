@@ -1,0 +1,134 @@
+.expertise {
+  @include adaptivevalue(padding-top, 145, 30, 1200, 320, 1);
+  @include adaptivevalue(padding-bottom, 165, 40, 1200, 320, 1);
+
+  &__title {
+    @include adaptivevalue(margin-bottom, 115, 40, 1200, 320, 1);
+  }
+
+  &__skills-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(30);
+    @include adaptivevalue(margin-bottom, 120, 40, 1200, 320, 1);
+  }
+
+  &__skills-descr-inner {
+    max-width: rem(770);
+  }
+
+  &__skills-list {
+    max-width: rem(370);
+    width: 100%;
+  }
+
+  &__skills-item-line {
+    height: rem(2);
+    background-color: #1D1D1D;
+
+  }
+
+  &__skills-item-content {
+    margin-top: rem(-3);
+    padding-top: rem(4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(28);
+    border-top: 2px solid #F0F0F0;
+    color: #1D1D1D;
+    @extend %OpenSans-400;
+    font-size: rem(11);
+    line-height: 1.82;
+    letter-spacing: 1px;
+  }
+
+  &__skills-descr {
+    &:not(:last-child) {
+      @include adaptivevalue(margin-bottom, 25, 10, 1200, 320, 1);
+    }
+  }
+
+
+
+
+  &__servises-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+  }
+
+  &__servises-item {
+    position: relative;
+    max-width: rem(373);
+    padding-left: rem(85);
+  }
+
+  &__servises-inner {
+    width: 100%;
+  }
+
+  &__servises-item--shape {
+    &::before {
+      position: absolute;
+      content: url(/images/icons/shape.svg);
+      width: rem(50);
+      height: rem(50);
+      top: 0;
+      left: 0;
+    }
+  }
+
+
+  &__servises-item--monitor {
+    &::before {
+      position: absolute;
+      content: url(/images/icons/monitor.svg);
+      width: rem(50);
+      height: rem(50);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__servises-item--speaker {
+    &::before {
+      position: absolute;
+      content: url(/images/icons/speaker.svg);
+      width: rem(50);
+      height: rem(50);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media screen and (width < 1024.98px) {
+    &__skills-inner {
+      flex-direction: column;
+    }
+
+    &__skills-descr-inner {
+      max-width: 100%;
+    }
+
+    &__skills-list {
+      max-width: 100%;
+    }
+  }
+
+
+  @media screen and (width < 958.98px) {
+    &__servises-list {
+      flex-direction: column;
+    }
+
+    &__servises-item {
+      max-width:100%;
+    }
+
+    &__servises-inner {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.about {
+  @include adaptivevalue(padding-top, 150, 70, 1200, 320, 1);
+  @include adaptivevalue(padding-bottom, 160, 80, 1200, 320, 1);
+  background-color: var(--background);
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: rem(20);
+  }
+
+  &__text-inner {
+    max-width: rem(770);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptivevalue(margin-bottom, 25, 10, 1440, 320, 1);
+    }
+  }
+
+  @media screen and (width < 1024.98px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__text-inner {
+      max-width: 100%;
+    }
+  }
+}

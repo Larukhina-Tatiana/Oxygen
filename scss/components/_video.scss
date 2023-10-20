@@ -1,0 +1,32 @@
+.video {
+  position: relative;
+  width: 100%;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__play-btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    color: var(--white);
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  @media screen and (width < 480.98px) {
+    &__play-svg {
+      width: rem(25);
+      height: rem(35);
+    }
+  }
+}

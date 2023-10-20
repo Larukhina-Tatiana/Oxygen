@@ -1,0 +1,113 @@
+// 300
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-Light.woff2) format('woff2'), url(../fonts/OpenSans-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+%OpenSans-300 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff2) format('woff2'), url(../fonts/Montserrat-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+%Montserrat-300 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather-LightItalic.woff2) format('woff2'), url(../fonts/Merriweather-LightItalic.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+%Merriweather-300 {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 300;
+}
+
+
+
+// 400
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-Regular.woff2) format('woff2'), url(../fonts/OpenSans-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+%OpenSans-400 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+}
+// 500 -Medium
+
+
+
+// 600 SemiBold
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-SemiBold.woff2) format('woff2'), url(../fonts/OpenSans-SemiBold.woff) format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+%OpenSans-600 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+}
+// 700
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.woff2) format('woff2'), url(../fonts/Montserrat-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+%Montserrat-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Bold.woff2) format('woff2'), url(../fonts/Raleway-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+%Raleway-700 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-Bold.woff2) format('woff2'), url(../fonts/OpenSans-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+%OpenSans-700 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+}
+
+// @font-face {
+//     font-family: 'icons';
+//     font-display: swap;
+//     src: url(../fonts/icons.woff2) format('woff2'), url(../fonts/icons.woff) format('woff');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+// @extend %Montserrat-600;
+
+
+

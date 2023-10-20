@@ -1,0 +1,147 @@
+.portfolio {
+
+  &__tabs-inner {
+    @include adaptivevalue(padding-top, 140, 50, 1200, 320, 1);
+    @include adaptivevalue(padding-bottom, 120, 30, 1200, 320, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__box {
+    @include adaptivevalue(padding-bottom, 72, 30, 1200, 320, 1);
+
+
+    &-lists {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10);
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__card {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      @include adaptivevalue(margin-bottom, 22, 10, 1200, 320, 1);
+    }
+
+    @media (any-hover: hover) {
+
+      &:hover,
+      &:focus {
+        .portfolio__card-hover {
+          transform: translateY(0);
+        }
+      }
+    }
+
+
+    &-inner {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &-hover {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--black);
+      border: rem(12) solid rgba(255, 255, 255, 0.15);
+      transform: translateY(105%);
+      @include transition ($transition-property: transform);
+    }
+
+    &-name {
+      margin-top: rem(10);
+      color: var(--white);
+      @extend %OpenSans-300;
+      font-size: rem(12);
+      letter-spacing: rem(1);
+      text-transform: uppercase;
+    }
+  }
+
+  &__btn {
+    @include adaptivevalue(padding-top, 40, 10, 1200, 320, 1);
+    @include adaptivevalue(padding-bottom, 40, 10, 1200, 320, 1);
+
+    width: 100%;
+    max-height: rem(100);
+    background: var(--background);
+    color: var(--black);
+    text-align: center;
+    @extend %Montserrat-700;
+    font-size: rem(14);
+    letter-spacing: rem(1.2);
+    text-transform: uppercase;
+    @include transition ($transition-property: background-color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--accent);
+      }
+    }
+  }
+
+
+  @media screen and (width < 1024.98px) {
+
+    &__box {
+
+      &-lists {
+        gap: rem(30);
+        justify-content: center;
+      }
+    }
+
+    &__box-item {
+      flex-basis: calc((100% - 90px) / 2);
+    }
+  }
+
+  @media screen and (width < 768.98px) {
+
+    &__tabs-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: rem(7);
+    }
+  }
+
+
+  @media screen and (width < 480.98px) {
+
+    &__box {
+
+      &-lists {
+        flex-direction: column;
+      }
+    }
+
+    &__box-item {
+      flex-basis: auto;
+    }
+  }
+}
