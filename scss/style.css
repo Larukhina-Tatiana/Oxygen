@@ -668,7 +668,7 @@ button,
 }
 .expertise__servises-item--shape::before {
   position: absolute;
-  content: url(/images/icons/shape.svg);
+  content: url(./images/icons/shape.svg);
   width: 3.125rem;
   height: 3.125rem;
   top: 0;
@@ -676,7 +676,7 @@ button,
 }
 .expertise__servises-item--monitor::before {
   position: absolute;
-  content: url(/images/icons/monitor.svg);
+  content: url(./images/icons/monitor.svg);
   width: 3.125rem;
   height: 3.125rem;
   top: 0;
@@ -684,7 +684,7 @@ button,
 }
 .expertise__servises-item--speaker::before {
   position: absolute;
-  content: url(/images/icons/speaker.svg);
+  content: url(../images/icons/speaker.svg);
   width: 3.125rem;
   height: 3.125rem;
   top: 0;
